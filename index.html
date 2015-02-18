@@ -11,13 +11,68 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js"></script>
 		<link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
 		<script src="http://mynameismatthieu.com/WOW/dist/wow.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
 			new WOW().init();
+			$(function () {
+			    $('#carcom').click(function(){
+			        var t= $('#carcomc');
+			        t.show('slide',{direction:'left'},1500);
+			        $('#objformc').css('display', 'none');
+			    });
+
+			    $('#objform').click(function(){
+			        var t= $('#objformc');
+			        t.show('slide',{direction:'left'},1500);
+			        $('#carcomc').css('display', 'none');
+			    });
+
+
+			    $('#modan').click(function(){
+			        var t= $('#modanc');
+			        t.show('slide',{direction:'left'},1500);
+			        $('#mallac').css('display', 'none');
+			        $('#alineacionc').css('display', 'none');
+			    });
+
+			    $('#malla').click(function(){
+			        var t= $('#mallac');
+			        t.show('slide',{direction:'left'},1500);
+			        $('#modanc').css('display', 'none');
+			        $('#alineacionc').css('display', 'none');
+			    });
+
+			    $('#alineacion').click(function(){
+			        var t= $('#alineacionc');
+			        t.show('slide',{direction:'left'},1500);
+			        $('#modanc').css('display', 'none');
+			        $('#mallac').css('display', 'none');
+			    });
+
+
+			    $('#pasaaula').click(function(){
+			        var t= $('#pasaaulac');
+			        t.show('slide',{direction:'left'},1500);
+			        $('#estrategiasc').css('display', 'none');
+			    });
+
+			    $('#estrategias').click(function(){
+			        var t= $('#estrategiasc');
+			        t.show('slide',{direction:'left'},1500);
+			        $('#pasaaulac').css('display', 'none');
+			    });
+
+
+			    $('#m4').click(function(){
+			        var t= $('#apoyoc');
+			        t.show('slide',{direction:'left'},1500);
+			    });
+			});
 		</script>
 		<style>
 			*{
@@ -30,7 +85,7 @@
 				background-position:fixed;
 			}
 			img{
-				width:100%;
+				max-width:100%;
 			}
 			#header img{
 				max-height:150px;
@@ -75,7 +130,7 @@
 				position:relative;
 			}
 			.pers{
-				width:50%;
+				width:100%;
 				float:left;
 				position:absolute;
 			}
@@ -83,6 +138,26 @@
 				transform:rotateY(0deg) rotateZ(-17deg);
 				position:relative;
 				z-index:1;
+			}
+			.iconos{
+				width:800px;
+				float:left;
+				position:absolute;
+				height:auto;
+				right:0;
+			}
+			.contenido li{
+				display:inline-block;
+				padding:0;
+				width:60px;
+				margin:0 10px;
+				vertical-align:top;
+			}
+			.contenido li img{
+				width:100%;
+			}
+			.contenido{
+				display:none;
 			}
 
 		</style>
@@ -117,8 +192,8 @@
 				<div class="col-md-3"><img src="http://www.anahuacoaxaca.edu.mx/nova/img/logo2.svg"></div>
 			</div>
 		</div>
-		<div>
-			<div class="" data-wow-duration="1s" data-wow-delay="0s" style="text-align:left; position:absolute; width:100%">
+		<div style="clear:both;width:100%">
+			<div class="" data-wow-duration="1s" data-wow-delay="0s" style="text-align:left; position:absolute; width:550px;height:600px;">
 				<div class="pers" id="izq">
 					<svg id="left" viewBox="0 0 1602.16 1572.157" enable-background="new 0 0 1602.16 1572.157" xml:space="preserve">
 						<g id="persona1">
@@ -338,7 +413,7 @@
 									<rect x="1340.127" y="1146.93" fill="#FFFFFF" width="6" height="6"/>
 								</g>
 							</g>
-							<g>
+							<g id="pasaaula">
 								<polygon fill="#FFFFFF" points="1292.361,1041.989 309.8,1041.989 258.553,1144.874 1343.607,1144.874 		"/>
 								
 									<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="169.3052" y1="479.7261" x2="1432.8555" y2="479.7261" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
@@ -397,7 +472,7 @@
 										L1161.292,1116.436z M1175.691,1077.846l-8,21.313h16.127L1175.691,1077.846z"/>
 								</g>
 							</g>
-							<g>
+							<g id="estrategias">
 								
 									<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="169.3052" y1="338.6948" x2="1432.8555" y2="338.6948" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
 									<stop  offset="0" style="stop-color:#9643D7"/>
@@ -496,7 +571,7 @@
 								</g>
 							</g>
 						</g>
-						<g>
+						<g id="m4">
 							
 								<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="75.1519" y1="154.5923" x2="1527.0088" y2="154.5923" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
 								<stop  offset="0" style="stop-color:#5A8573"/>
@@ -683,7 +758,7 @@
 									<rect x="1210.688" y="893.922" fill="#FFFFFF" width="6" height="6"/>
 								</g>
 							</g>
-							<g>
+							<g id="modan">
 								<polygon fill="#FFFFFF" points="1113.48,682.857 488.68,682.857 421.388,817.958 1180.773,817.958 		"/>
 								
 									<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="310.7959" y1="822.7495" x2="1291.3652" y2="822.7495" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
@@ -775,7 +850,7 @@
 									<path fill="#FFFFFF" d="M1036.601,764.665h5.311v28.619h11.745v4.68h-17.056V764.665z"/>
 								</g>
 							</g>
-							<g>
+							<g id="malla">
 								<polygon fill="#FFFFFF" points="1184.658,825.756 417.503,825.756 385.533,889.941 1216.628,889.941 		"/>
 								
 									<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="310.7959" y1="715.3086" x2="1291.3652" y2="715.3086" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
@@ -828,7 +903,7 @@
 										h-4.038v25.436h-4.721L976.22,845.874L976.22,845.874z"/>
 								</g>
 							</g>
-							<g>
+							<g id="alineacion">
 								<polygon fill="#FFFFFF" points="1291.365,1039.989 1221.6,899.922 380.562,899.922 310.796,1039.989 		"/>
 								
 									<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="310.7959" y1="603.2017" x2="1291.3652" y2="603.2017" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
@@ -955,6 +1030,81 @@
 								<stop  offset="1" style="stop-color:#008E98"/>
 							</linearGradient>
 							<polygon fill="url(#SVGID_10_)" points="490.019,682.167 1114.375,682.167 958.611,369.446 645.784,369.446 	"/>
+							<g id="carcom">
+								<g>
+									<polygon fill="#FFFFFF" points="800.424,374.319 642.66,374.319 552.36,555.608 800.424,555.608 		"/>
+									
+										<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="489.3223" y1="1108.1938" x2="1113.6777" y2="1108.1938" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
+										<stop  offset="0" style="stop-color:#29CFAD"/>
+										<stop  offset="0.2355" style="stop-color:#23C6AA"/>
+										<stop  offset="0.6256" style="stop-color:#13ACA2"/>
+										<stop  offset="1" style="stop-color:#008E98"/>
+									</linearGradient>
+									<polygon fill="url(#SVGID_11_)" points="800.424,374.319 642.66,374.319 552.36,555.608 800.424,555.608 		"/>
+									<g>
+										<path fill="#FFFFFF" d="M616.418,532.806c-1.62,5.508-6.804,9.432-13.031,9.432c-8.135,0-13.966-6.443-13.966-13.858
+											c0-7.091,5.508-13.786,13.931-13.786c7.668,0.036,12.022,5.688,13.066,9.575h-5.651c-0.827-1.835-3.203-4.823-7.45-4.859
+											c-5.185,0-8.531,4.355-8.531,9.071c0,4.859,3.492,9.144,8.566,9.144c4.752,0,6.911-3.744,7.415-4.716h5.651V532.806z"/>
+										<path fill="#FFFFFF" d="M621.712,541.733h-5.831l10.798-26.638h4.716l10.547,26.638h-5.867l-1.944-5.22h-10.51L621.712,541.733z
+											 M628.803,521.432l-3.778,10.799h7.667L628.803,521.432z"/>
+										<path fill="#FFFFFF" d="M644.644,515.096h8.063c4.14,0,6.515,0.648,7.955,1.692c2.196,1.584,3.383,4.283,3.383,7.235
+											c0,1.943-0.54,3.672-1.439,4.968c-1.151,1.69-2.663,2.447-4.392,2.879l5.939,9.863h-5.615l-7.163-12.383h1.044
+											c1.764,0,3.671-0.107,4.787-0.972c1.044-0.864,1.692-2.268,1.692-3.887c0-1.62-0.793-3.096-1.98-3.853
+											c-0.972-0.611-2.268-0.827-3.779-0.827h-3.132v21.921h-5.363V515.096z"/>
+										<path fill="#FFFFFF" d="M670.96,541.733h-5.832l10.799-26.638h4.716l10.547,26.638h-5.867l-1.944-5.22h-10.51L670.96,541.733z
+											 M682.37,506.457l1.548,3.383l-8.783,4.176l-1.404-2.844L682.37,506.457z M678.05,521.432l-3.778,10.799h7.666L678.05,521.432z"
+											/>
+										<path fill="#FFFFFF" d="M717.973,532.806c-1.619,5.508-6.803,9.432-13.03,9.432c-8.136,0-13.967-6.443-13.967-13.858
+											c0-7.091,5.508-13.786,13.931-13.786c7.667,0.036,12.021,5.688,13.065,9.575h-5.65c-0.828-1.835-3.204-4.823-7.451-4.859
+											c-5.183,0-8.531,4.355-8.531,9.071c0,4.859,3.491,9.144,8.567,9.144c4.751,0,6.911-3.744,7.415-4.716h5.651V532.806z"/>
+										<path fill="#FFFFFF" d="M725.212,519.813h-5.76v-4.716h16.846v4.716h-5.723v21.921h-5.363V519.813z"/>
+										<path fill="#FFFFFF" d="M739.107,515.096h14.938v4.715h-9.575v6.048h9.396v4.715h-9.396v6.442h9.575v4.716h-14.938V515.096z"/>
+										<path fill="#FFFFFF" d="M758.188,515.096h8.063c4.14,0,6.515,0.648,7.955,1.692c2.196,1.584,3.384,4.283,3.384,7.235
+											c0,1.943-0.54,3.672-1.439,4.968c-1.152,1.69-2.664,2.447-4.393,2.879l5.939,9.863h-5.615l-7.163-12.383h1.044
+											c1.764,0,3.672-0.107,4.788-0.972c1.044-0.864,1.692-2.268,1.692-3.887c0-1.62-0.792-3.096-1.98-3.853
+											c-0.972-0.611-2.268-0.827-3.779-0.827h-3.132v21.921h-5.362L758.188,515.096L758.188,515.096z"/>
+									</g>
+								</g>
+								<g>
+									<polygon fill="#FFFFFF" points="806.335,555.608 1050.64,555.608 960.341,374.319 806.335,374.319 		"/>
+									
+										<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="489.3223" y1="1108.1938" x2="1113.6777" y2="1108.1938" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
+										<stop  offset="0" style="stop-color:#29CFAD"/>
+										<stop  offset="0.2355" style="stop-color:#23C6AA"/>
+										<stop  offset="0.6256" style="stop-color:#13ACA2"/>
+										<stop  offset="1" style="stop-color:#008E98"/>
+									</linearGradient>
+									<polygon fill="url(#SVGID_13_)" points="806.335,555.608 1050.64,555.608 960.341,374.319 806.335,374.319 		"/>
+									<g>
+										<path fill="#FFFFFF" d="M835.893,534.539c-1.306,4.438-5.481,7.6-10.501,7.6c-6.555,0-11.254-5.191-11.254-11.168
+											c0-5.714,4.438-11.108,11.226-11.108c6.179,0.028,9.688,4.583,10.529,7.716h-4.554c-0.668-1.479-2.582-3.887-6.005-3.916
+											c-4.177,0-6.875,3.51-6.875,7.31c0,3.916,2.813,7.368,6.903,7.368c3.83,0,5.569-3.017,5.977-3.8L835.893,534.539L835.893,534.539
+											z"/>
+										<path fill="#FFFFFF" d="M837.888,531.174c0-6.875,5.279-11.312,11.255-11.312c6.497,0,11.284,5.047,11.284,11.139
+											c0,6.091-4.758,11.139-11.312,11.139c-6.585,0-11.228-5.191-11.228-10.936V531.174z M842.211,531c0,3.916,2.813,7.338,6.99,7.338
+											c4.352,0,6.904-3.771,6.904-7.31c0-3.598-2.554-7.368-6.934-7.368c-4.293,0-6.962,3.539-6.962,7.31L842.211,531L842.211,531z"/>
+										<path fill="#FFFFFF" d="M863.525,541.733v-21.466h5.83l5.512,15.403l5.424-15.403h5.859v21.466h-4.003l0.115-17.201
+											l-6.004,17.201h-2.844l-6.033-17.201l0.116,17.201H863.525z"/>
+										<path fill="#FFFFFF" d="M896.615,520.268c3.626,0,5.076,0.522,6.324,1.479c1.565,1.276,2.437,3.365,2.437,5.481
+											c0,2.117-0.899,4.322-2.263,5.425c-1.45,1.188-2.9,1.711-6.033,1.711h-2.641v7.368h-4.321v-21.466L896.615,520.268
+											L896.615,520.268z M894.439,530.565h2.553c0.986,0,1.942-0.087,2.813-0.552c0.783-0.405,1.421-1.362,1.421-2.727
+											s-0.638-2.263-1.479-2.669c-0.87-0.464-1.856-0.551-2.93-0.551h-2.379V530.565z"/>
+										<path fill="#FFFFFF" d="M907.75,520.268h12.038v3.801h-7.716v4.873h7.569v3.8h-7.569v5.191h7.716v3.801H907.75V520.268z"/>
+										<path fill="#FFFFFF" d="M926.078,524.068h-4.641v-3.801h13.574v3.801H930.4v17.665h-4.322V524.068z"/>
+										<path fill="#FFFFFF" d="M937.271,520.268h12.036v3.801h-7.715v4.873h7.57v3.8h-7.57v5.191h7.715v3.801h-12.036V520.268z"/>
+										<path fill="#FFFFFF" d="M966.448,535.148l-0.087-14.882h4.146v21.466h-3.829l-9.891-14.853l0.087,14.853h-4.148v-21.466h3.858
+											L966.448,535.148z"/>
+										<path fill="#FFFFFF" d="M995.421,534.539c-1.306,4.438-5.481,7.6-10.501,7.6c-6.555,0-11.254-5.191-11.254-11.168
+											c0-5.714,4.438-11.108,11.225-11.108c6.18,0.028,9.689,4.583,10.53,7.716h-4.554c-0.668-1.479-2.582-3.887-6.005-3.916
+											c-4.178,0-6.875,3.51-6.875,7.31c0,3.916,2.813,7.368,6.902,7.368c3.83,0,5.57-3.017,5.978-3.8L995.421,534.539L995.421,534.539z
+											"/>
+										<path fill="#FFFFFF" d="M998.373,520.268h4.322v21.466h-4.322V520.268z"/>
+										<path fill="#FFFFFF" d="M1009.626,541.733h-4.699l8.702-21.466h3.8l8.499,21.466h-4.729l-1.566-4.206h-8.47L1009.626,541.733z
+											 M1015.339,525.373l-3.045,8.702h6.178L1015.339,525.373z"/>
+									</g>
+								</g>
+							</g>
+
 							<g>
 								<g>
 									<rect x="800.424" y="371.319" fill="#FFFFFF" width="6" height="6"/>
@@ -968,41 +1118,7 @@
 									<rect x="800.424" y="524.807" fill="#FFFFFF" width="6" height="6"/>
 								</g>
 							</g>
-							<g>
-								<polygon fill="#FFFFFF" points="800.424,374.319 642.66,374.319 552.36,555.608 800.424,555.608 		"/>
-								
-									<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="489.3223" y1="1108.1938" x2="1113.6777" y2="1108.1938" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
-									<stop  offset="0" style="stop-color:#29CFAD"/>
-									<stop  offset="0.2355" style="stop-color:#23C6AA"/>
-									<stop  offset="0.6256" style="stop-color:#13ACA2"/>
-									<stop  offset="1" style="stop-color:#008E98"/>
-								</linearGradient>
-								<polygon fill="url(#SVGID_11_)" points="800.424,374.319 642.66,374.319 552.36,555.608 800.424,555.608 		"/>
-								<g>
-									<path fill="#FFFFFF" d="M616.418,532.806c-1.62,5.508-6.804,9.432-13.031,9.432c-8.135,0-13.966-6.443-13.966-13.858
-										c0-7.091,5.508-13.786,13.931-13.786c7.668,0.036,12.022,5.688,13.066,9.575h-5.651c-0.827-1.835-3.203-4.823-7.45-4.859
-										c-5.185,0-8.531,4.355-8.531,9.071c0,4.859,3.492,9.144,8.566,9.144c4.752,0,6.911-3.744,7.415-4.716h5.651V532.806z"/>
-									<path fill="#FFFFFF" d="M621.712,541.733h-5.831l10.798-26.638h4.716l10.547,26.638h-5.867l-1.944-5.22h-10.51L621.712,541.733z
-										 M628.803,521.432l-3.778,10.799h7.667L628.803,521.432z"/>
-									<path fill="#FFFFFF" d="M644.644,515.096h8.063c4.14,0,6.515,0.648,7.955,1.692c2.196,1.584,3.383,4.283,3.383,7.235
-										c0,1.943-0.54,3.672-1.439,4.968c-1.151,1.69-2.663,2.447-4.392,2.879l5.939,9.863h-5.615l-7.163-12.383h1.044
-										c1.764,0,3.671-0.107,4.787-0.972c1.044-0.864,1.692-2.268,1.692-3.887c0-1.62-0.793-3.096-1.98-3.853
-										c-0.972-0.611-2.268-0.827-3.779-0.827h-3.132v21.921h-5.363V515.096z"/>
-									<path fill="#FFFFFF" d="M670.96,541.733h-5.832l10.799-26.638h4.716l10.547,26.638h-5.867l-1.944-5.22h-10.51L670.96,541.733z
-										 M682.37,506.457l1.548,3.383l-8.783,4.176l-1.404-2.844L682.37,506.457z M678.05,521.432l-3.778,10.799h7.666L678.05,521.432z"
-										/>
-									<path fill="#FFFFFF" d="M717.973,532.806c-1.619,5.508-6.803,9.432-13.03,9.432c-8.136,0-13.967-6.443-13.967-13.858
-										c0-7.091,5.508-13.786,13.931-13.786c7.667,0.036,12.021,5.688,13.065,9.575h-5.65c-0.828-1.835-3.204-4.823-7.451-4.859
-										c-5.183,0-8.531,4.355-8.531,9.071c0,4.859,3.491,9.144,8.567,9.144c4.751,0,6.911-3.744,7.415-4.716h5.651V532.806z"/>
-									<path fill="#FFFFFF" d="M725.212,519.813h-5.76v-4.716h16.846v4.716h-5.723v21.921h-5.363V519.813z"/>
-									<path fill="#FFFFFF" d="M739.107,515.096h14.938v4.715h-9.575v6.048h9.396v4.715h-9.396v6.442h9.575v4.716h-14.938V515.096z"/>
-									<path fill="#FFFFFF" d="M758.188,515.096h8.063c4.14,0,6.515,0.648,7.955,1.692c2.196,1.584,3.384,4.283,3.384,7.235
-										c0,1.943-0.54,3.672-1.439,4.968c-1.152,1.69-2.664,2.447-4.393,2.879l5.939,9.863h-5.615l-7.163-12.383h1.044
-										c1.764,0,3.672-0.107,4.788-0.972c1.044-0.864,1.692-2.268,1.692-3.887c0-1.62-0.792-3.096-1.98-3.853
-										c-0.972-0.611-2.268-0.827-3.779-0.827h-3.132v21.921h-5.362L758.188,515.096L758.188,515.096z"/>
-								</g>
-							</g>
-							<g>
+							<g id="objform">
 								<polygon fill="#FFFFFF" points="546.981,566.408 493.665,673.449 1109.336,673.449 1056.019,566.408 		"/>
 								
 									<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="489.3223" y1="953.229" x2="1113.6777" y2="953.229" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
@@ -1065,44 +1181,6 @@
 										c3.724,0,8.663,1.976,8.891,8.207h-5.585c-0.229-1.292-0.723-3.458-3.496-3.458c-1.86,0-3.457,1.292-3.457,3.19
 										c-0.037,2.09,1.481,2.622,6.23,4.599c4.294,1.86,6.688,3.913,6.688,7.901c0,4.521-2.772,8.739-9.385,8.739
 										c-6.383,0-9.688-3.837-9.649-9.271h5.622V648.314z"/>
-								</g>
-							</g>
-							<g>
-								<polygon fill="#FFFFFF" points="806.335,555.608 1050.64,555.608 960.341,374.319 806.335,374.319 		"/>
-								
-									<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="489.3223" y1="1108.1938" x2="1113.6777" y2="1108.1938" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
-									<stop  offset="0" style="stop-color:#29CFAD"/>
-									<stop  offset="0.2355" style="stop-color:#23C6AA"/>
-									<stop  offset="0.6256" style="stop-color:#13ACA2"/>
-									<stop  offset="1" style="stop-color:#008E98"/>
-								</linearGradient>
-								<polygon fill="url(#SVGID_13_)" points="806.335,555.608 1050.64,555.608 960.341,374.319 806.335,374.319 		"/>
-								<g>
-									<path fill="#FFFFFF" d="M835.893,534.539c-1.306,4.438-5.481,7.6-10.501,7.6c-6.555,0-11.254-5.191-11.254-11.168
-										c0-5.714,4.438-11.108,11.226-11.108c6.179,0.028,9.688,4.583,10.529,7.716h-4.554c-0.668-1.479-2.582-3.887-6.005-3.916
-										c-4.177,0-6.875,3.51-6.875,7.31c0,3.916,2.813,7.368,6.903,7.368c3.83,0,5.569-3.017,5.977-3.8L835.893,534.539L835.893,534.539
-										z"/>
-									<path fill="#FFFFFF" d="M837.888,531.174c0-6.875,5.279-11.312,11.255-11.312c6.497,0,11.284,5.047,11.284,11.139
-										c0,6.091-4.758,11.139-11.312,11.139c-6.585,0-11.228-5.191-11.228-10.936V531.174z M842.211,531c0,3.916,2.813,7.338,6.99,7.338
-										c4.352,0,6.904-3.771,6.904-7.31c0-3.598-2.554-7.368-6.934-7.368c-4.293,0-6.962,3.539-6.962,7.31L842.211,531L842.211,531z"/>
-									<path fill="#FFFFFF" d="M863.525,541.733v-21.466h5.83l5.512,15.403l5.424-15.403h5.859v21.466h-4.003l0.115-17.201
-										l-6.004,17.201h-2.844l-6.033-17.201l0.116,17.201H863.525z"/>
-									<path fill="#FFFFFF" d="M896.615,520.268c3.626,0,5.076,0.522,6.324,1.479c1.565,1.276,2.437,3.365,2.437,5.481
-										c0,2.117-0.899,4.322-2.263,5.425c-1.45,1.188-2.9,1.711-6.033,1.711h-2.641v7.368h-4.321v-21.466L896.615,520.268
-										L896.615,520.268z M894.439,530.565h2.553c0.986,0,1.942-0.087,2.813-0.552c0.783-0.405,1.421-1.362,1.421-2.727
-										s-0.638-2.263-1.479-2.669c-0.87-0.464-1.856-0.551-2.93-0.551h-2.379V530.565z"/>
-									<path fill="#FFFFFF" d="M907.75,520.268h12.038v3.801h-7.716v4.873h7.569v3.8h-7.569v5.191h7.716v3.801H907.75V520.268z"/>
-									<path fill="#FFFFFF" d="M926.078,524.068h-4.641v-3.801h13.574v3.801H930.4v17.665h-4.322V524.068z"/>
-									<path fill="#FFFFFF" d="M937.271,520.268h12.036v3.801h-7.715v4.873h7.57v3.8h-7.57v5.191h7.715v3.801h-12.036V520.268z"/>
-									<path fill="#FFFFFF" d="M966.448,535.148l-0.087-14.882h4.146v21.466h-3.829l-9.891-14.853l0.087,14.853h-4.148v-21.466h3.858
-										L966.448,535.148z"/>
-									<path fill="#FFFFFF" d="M995.421,534.539c-1.306,4.438-5.481,7.6-10.501,7.6c-6.555,0-11.254-5.191-11.254-11.168
-										c0-5.714,4.438-11.108,11.225-11.108c6.18,0.028,9.689,4.583,10.53,7.716h-4.554c-0.668-1.479-2.582-3.887-6.005-3.916
-										c-4.178,0-6.875,3.51-6.875,7.31c0,3.916,2.813,7.368,6.902,7.368c3.83,0,5.57-3.017,5.978-3.8L995.421,534.539L995.421,534.539z
-										"/>
-									<path fill="#FFFFFF" d="M998.373,520.268h4.322v21.466h-4.322V520.268z"/>
-									<path fill="#FFFFFF" d="M1009.626,541.733h-4.699l8.702-21.466h3.8l8.499,21.466h-4.729l-1.566-4.206h-8.47L1009.626,541.733z
-										 M1015.339,525.373l-3.045,8.702h6.178L1015.339,525.373z"/>
 								</g>
 							</g>
 							<g>
@@ -1174,6 +1252,149 @@
 						</g>
 						</svg>
 				</div>
+			</div>
+			<div class="iconos">
+				<div class="contenido" id="carcomc" style="width: 100%;position: absolute;;height: 200px;">
+		        	<h1 id="titu" style=" margin:0px; height:97px;">Pirámide del Proyecto Formativo NOVA</h1>
+		            
+		            <div style="width:50%; float:left">Carácter</div>
+		            <div style="width:50%; float:left">Competencias</div>
+		        	<ul>
+		            	
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163762_1&mode=cpview&mode=reset"><img src="img/alumno/a1.svg" data-toggle="tooltip" data-placement="top" title="Prudencia"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163762_1&mode=cpview&mode=reset"><img src="img/alumno/a2.svg" data-toggle="tooltip" data-placement="top" title="Justicia"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163762_1&mode=cpview&mode=reset"><img src="img/alumno/a3.svg" data-toggle="tooltip" data-placement="top" title="Fortaleza"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163762_1&mode=cpview&mode=reset"><img src="img/alumno/a4.svg" data-toggle="tooltip" data-placement="top" title="Autodominio"></a></p>
+		                </li>
+		            	<li style="border-right:1px dashed #FFF;">
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163762_1&mode=cpview&mode=reset"><img src="img/alumno/a5.svg" data-toggle="tooltip" data-placement="top" title="Sentido"></a></p>
+		                </li>
+		                
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163763_1&mode=cpview&mode=reset"><img src="img/alumno/a6.svg" data-toggle="tooltip" data-placement="top" title="Toma de decisiones"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163763_1&mode=cpview&mode=reset"><img src="img/alumno/a7.svg" data-toggle="tooltip" data-placement="top" title="Pensamiento crítico"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163763_1&mode=cpview&mode=reset"><img src="img/alumno/a8.svg" data-toggle="tooltip" data-placement="top" title="Trabajo en Equipo"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163763_1&mode=cpview&mode=reset"><img src="img/alumno/a9.svg" data-toggle="tooltip" data-placement="top" title="Comunicación Eficaz"></a></p>
+		                </li>
+		            </ul>
+		        </div>
+
+		        <div class="contenido" id="objformc" style="width: 100%;position: absolute;height: 200px;">
+		            <h1 id="titu" style="margin:0px; height:97px;"></h1>
+		            <p>Dignidad de la persona, formación moral, sentido de vida, convicción de conocer la verdad, visión humana de la profesión. </p>
+		            <p>“Criterios de juicio, valores dominantes. (ECE 48)”.</p>
+		            <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151681_1&mode=cpview&mode=reset">Entrar</a></p>
+		        </div>
+
+		        <div class="contenido" id="modanc" style="width: 100%;position: absolute;height: 97px; margin-top:200px">
+		            <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151682_1&mode=cpview&mode=reset">Repensamiento</a></p>
+		        </div>
+		        <div class="contenido" id="mallac" style="width: 100%;position: absolute;height: 97px; margin-top:200px">
+		        	<ul>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m1.svg" data-toggle="tooltip" data-placement="top" title="Humanidades"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m2.svg" data-toggle="tooltip" data-placement="top" title="BEAS"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m3.svg" data-toggle="tooltip" data-placement="top" title="Practicum"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m4.svg" data-toggle="tooltip" data-placement="top" title="@prende"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m5.svg" data-toggle="tooltip" data-placement="top" title="Materia en línea"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m6.svg" data-toggle="tooltip" data-placement="top" title="Materia Semi-presencial"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m7.svg" data-toggle="tooltip" data-placement="top" title="Inglés"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m8.svg" data-toggle="tooltip" data-placement="top" title="Materia en Inglés"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151683_1&mode=cpview&mode=reset"><img src="img/modelo/m9.svg" data-toggle="tooltip" data-placement="top" title="Seriación de Materias"></a></p>
+		                </li>
+		            </ul>
+		        </div>
+		        <div class="contenido" id="alineacionc" style="width: 100%;position: absolute;height: 97px; margin-top:200px">
+		            <ul>
+		                <li>
+		                    <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151684_1&mode=cpview&mode=reset"><img src="img/modelo/m10.svg" data-toggle="tooltip" data-placement="top" title="Debate y Concurso"></a></p>
+		                </li>
+		                <li>
+		                    <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151684_1&mode=cpview&mode=reset"><img src="img/modelo/m2.svg" data-toggle="tooltip" data-placement="top" title="BEA Plan de Vida y Sexualidad"></a></p>
+		                </li>
+		                <li>
+		                    <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151684_1&mode=cpview&mode=reset"><img src="img/modelo/m11.svg" data-toggle="tooltip" data-placement="top" title="Horas Newman"></a></p>
+		                </li>
+		                <li>
+		                    <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151684_1&mode=cpview&mode=reset"><img src="img/modelo/m12.svg" data-toggle="tooltip" data-placement="top" title="Servicio Social"></a></p>
+		                </li>
+		                <li>
+		                    <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151684_1&mode=cpview&mode=reset"><img src="img/modelo/m13.svg" data-toggle="tooltip" data-placement="top" title="Materia de Liderazgo"></a></p>
+		                </li>
+		                <li>
+		                    <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151684_1&mode=cpview&mode=reset"><img src="img/modelo/m14.svg" data-toggle="tooltip" data-placement="top" title="Pastoral"></a></p>
+		                </li>
+		                <li>
+		                    <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151684_1&mode=cpview&mode=reset"><img src="img/modelo/m15.svg" data-toggle="tooltip" data-placement="top" title="Accion Social"></a></p>
+		                </li>
+		            </ul>
+		        </div>
+
+		        <div class="contenido" id="pasaaulac" style="width:100%;position:absolute;height:100px;margin-top:297px">
+		            <p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151685_1&mode=cpview&mode=reset">Entrar</a></p>
+		        </div>
+		        <div class="contenido" id="estrategiasc" style="width:100%;position:absolute;height:100px;margin-top:297px">
+		        	<ul>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151685_1&mode=cpview&mode=reset"><img src="img/profesor/p1.svg" data-toggle="tooltip" data-placement="top" title="Transformar Vidas"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151685_1&mode=cpview&mode=reset"><img src="img/profesor/p2.svg" data-toggle="tooltip" data-placement="top" title="Rigor y Relevancia"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151685_1&mode=cpview&mode=reset"><img src="img/profesor/p3.svg" data-toggle="tooltip" data-placement="top" title="Competencias"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151685_1&mode=cpview&mode=reset"><img src="img/profesor/p4.svg" data-toggle="tooltip" data-placement="top" title="Educación por Evidencias"></a></p>
+		                </li>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151685_1&mode=cpview&mode=reset"><img src="img/profesor/p5.svg" data-toggle="tooltip" data-placement="top" title="Reciprocidad"></a></p>
+		                </li>
+		            </ul>
+		        </div>
+
+		        <div class="contenido" id="apoyoc" style="width:100%;position:absolute;height:100px;margin-top:397px">
+		        	<ul>
+		        		<li>
+		                    <p><a href=""><img src="img/apoyo/o1.svg" data-toggle="tooltip" data-placement="top" title="Personal"></a></p>
+		                </li>
+		                <li>
+		                    <p><a href=""><img src="img/apoyo/o2.svg" data-toggle="tooltip" data-placement="top" title="Social"></a></p>
+		                </li>
+		                <li>
+		                    <p><a href=""><img src="img/apoyo/o3.svg" data-toggle="tooltip" data-placement="top" title="Estructural"></a></p>
+		                </li>
+		        	</ul>
+		        </div>
 			</div>
 		</div>
 		<script>
