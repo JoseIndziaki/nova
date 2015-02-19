@@ -22,6 +22,11 @@
 			new WOW().init();
 			$(function () {
 				$("a.youtube").YouTubePlaylistModal({autoplay:1, width:640, height:480});
+
+			    $('#persona').click(function(){
+			        var t= $('#personac');
+			        t.show('slide',{direction:'left'},1500);
+			    });
 			    $('#carcom').click(function(){
 			        var t= $('#carcomc');
 			        t.show('slide',{direction:'left'},1500);
@@ -80,12 +85,35 @@
 			*{
 				text-align:center;
 			}
+			.no-center p{
+				text-align:left;
+			}
+			#persona, #m4, #estrategias, #pasaaula, #alineacion, #malla, #modan, #objform, #carcom{
+				cursor:pointer;
+			}
 
 			body{
 				background:url("http://rawgit.com/JoseIndziaki/nova/master/img/fondo.svg");
 				background-size:100%;
 				background-position:fixed;
 			}
+			.contenido a:hover{
+				animation:levantar 1s;
+				-webkit-animation:levantar 1s;
+			}
+			@-webkit-keyframes levantar {
+			    0% {transform: translateY(0px);}
+			    50% {transform: translateY(-20px);}
+			    100% {transform: translateY(0px);}
+			} 
+
+			/* Standard syntax */ 
+			@keyframes levantar {
+			    0% {transform: translateY(0px);}
+			    50% {transform: translateY(-20px);}
+			    100% {transform: translateY(0px);}
+			}
+
 			img{
 				max-width:100%;
 			}
@@ -191,7 +219,7 @@
 					        <div>
 					        	<ul>
 					        		<li>1.- El objetivo de este curso es conocer a profundidad los elementos de la pirámide</li>
-					        		<li>2.- Se inicia de manera descendente, comenzando con <b>Carácter</b> y <b>Competencias</b></li>
+					        		<li>2.- Se inicia de manera descendente, comenzando con <b>Persona</b></li>
 					        		<li>3.- Al finalizar las lecturas de cada elemento hay una evaluación para retroalimentar lo aprendido.</li>
 					        		<li>4.- Para continuar con el siguiente nivel tienes que pasar el anterior con la evaluación.</li>
 					        	</ul>
@@ -201,8 +229,17 @@
 					  </div>
 					</div>
 				</div>
-				<div class="col-md-4"><img src="http://rawgit.com/JoseIndziaki/nova/master/img/mision.svg"></div>
-				<div class="col-md-4"><img src="http://rawgit.com/JoseIndziaki/nova/master/img/vision.svg"></div>
+				<div class="col-md-4 no-center">
+					<br>
+					<p><b>Misión</b></p>
+					<p>Contribuir a la formación integral de líderes de acción positiva y promover institucionalmente el desarrollo de la persona y de la sociedad, inspirados en los valores del humanismo cristiano.</p>
+				</div>
+				<div class="col-md-4 no-center">
+					<br>
+					<p><b>Visión</b></p>
+					<p>100% de aprobados en CENEVAL.</p>
+					<p>Reducir la deserción escolar en un 50%.</p>
+				</div>
 				<div class="col-md-3"><img src="http://www.anahuacoaxaca.edu.mx/nova/img/logo2.svg"></div>
 			</div>
 		</div>
@@ -1208,7 +1245,7 @@
 									h-12v-6h12V561.608z M573.058,561.608h-12v-6h12V561.608z"/>
 							</g>
 						</g>
-						<g>
+						<g id="persona">
 							
 								<linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="646.2627" y1="1359.0737" x2="957.085" y2="1359.0737" gradientTransform="matrix(1 0 0 -1 0 1573.1572)">
 								<stop  offset="0" style="stop-color:#29ABE2"/>
@@ -1269,8 +1306,14 @@
 				</div>
 			</div>
 			<div class="iconos">
-				<div class="contenido" id="carcomc" style="width: 100%;position: absolute;;height: 200px;">
-		        	<h1 id="titu" style=" margin:0px; height:97px;">Pirámide del Proyecto Formativo NOVA</h1>
+				<div class="contenido" id="personac" style="width: 100%;position: absolute;;height: 100px;">
+		        	<ul>
+		            	<li>
+		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_163762_1&mode=cpview&mode=reset"><img src="img/persona.svg" data-toggle="tooltip" data-placement="top" title="Persona"></a></p>
+		                </li>
+		            </ul>
+				</div>
+				<div class="contenido" id="carcomc" style="width: 100%;position: absolute;;height: 100px;margin-top:100px">
 		            
 		            <div style="width:50%; float:left">Carácter</div>
 		            <div style="width:50%; float:left">Competencias</div>
@@ -1307,8 +1350,7 @@
 		            </ul>
 		        </div>
 
-		        <div class="contenido" id="objformc" style="width: 100%;position: absolute;height: 200px;">
-		        	<h1 style=" margin:0px; height:97px;">Pirámide del Proyecto Formativo NOVA</h1>
+		        <div class="contenido" id="objformc" style="width: 100%;position: absolute;height: 100px; margin-top:100px">
 		            <ul>
 		            	<li>
 		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151681_1&mode=cpview&mode=reset"><img src="http://rawgit.com/JoseIndziaki/nova/master/img/alumno/a10.svg" data-toggle="tooltip" data-placement="top" title="Objetivos Formativos"></a></p>
