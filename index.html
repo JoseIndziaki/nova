@@ -16,9 +16,11 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="http://daneden.github.io/animate.css/animate.min.css">
 		<script src="http://mynameismatthieu.com/WOW/dist/wow.min.js"></script>
+		<script type="text/javascript" src="http://lab.abhinayrathore.com/bootstrap-youtube-playlist-popup/bootstrap.youtube.playlist.popup.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
 			new WOW().init();
+			$("a.youtube").YouTubePlaylistModal({autoplay:1, width:640, height:480});
 			$(function () {
 			    $('#carcom').click(function(){
 			        var t= $('#carcomc');
@@ -100,6 +102,18 @@
 				color:#fff;
 				cursor:pointer;
 				margin-top:20px;
+				animation: pulse 1s infinite;
+				-webkit-animation:pulse 1s infinite;
+			}
+			@-webkit-keyframes pulse {
+			    from {box-shadow: 0px 0px 0px 0px #F38B00;}
+			    to {box-shadow: 0px 0px 0px 20px transparent;}
+			} 
+
+			/* Standard syntax */ 
+			@keyframes pulse {
+			    from {top: 0px;}
+			    to {top: 200px;}
 			}
 			.instructions img{
 				width:45%;
@@ -187,11 +201,12 @@
 					  </div>
 					</div>
 				</div>
-				<div class="col-md-3"><img src="http://www.anahuacoaxaca.edu.mx/nova/img/anahuac1.svg"></div>
-				<div class="col-md-5"><h1></h1></div>
+				<div class="col-md-4"><img src="http://rawgit.com/JoseIndziaki/nova/master/img/mision.svg"></div>
+				<div class="col-md-4"><img src="http://rawgit.com/JoseIndziaki/nova/master/img/vision.svg"></div>
 				<div class="col-md-3"><img src="http://www.anahuacoaxaca.edu.mx/nova/img/logo2.svg"></div>
 			</div>
 		</div>
+		<p style="text-align:center"><a class="youtube" href="#" data-playlist="ItE4g8i74Js,QlEu9G3ONqA">Ver Videos</a></p>
 		<div style="clear:both;width:100%">
 			<div class="" data-wow-duration="1s" data-wow-delay="0s" style="text-align:left; position:absolute; width:550px;height:600px;">
 				<div class="pers" id="izq">
@@ -1293,6 +1308,7 @@
 		        </div>
 
 		        <div class="contenido" id="objformc" style="width: 100%;position: absolute;height: 200px;">
+		        	<h1 style=" margin:0px; height:97px;">Pirámide del Proyecto Formativo NOVA</h1>
 		            <ul>
 		            	<li>
 		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151681_1&mode=cpview&mode=reset"><img src="http://rawgit.com/JoseIndziaki/nova/master/img/alumno/a10.svg" data-toggle="tooltip" data-placement="top" title="Objetivos Formativos"></a></p>
@@ -1370,7 +1386,6 @@
 		                	<p><a href="http://anahuac.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_91308_1&toc_id=_151685_1&mode=cpview&mode=reset"><img src="http://rawgit.com/JoseIndziaki/nova/master/img/profesor/p6.svg" data-toggle="tooltip" data-placement="top" title="Lo que pasa en el aula"></a></p>
 		                </li>
 		            </ul>
-		            <p><a href="">Entrar</a></p>
 		        </div>
 		        <div class="contenido" id="estrategiasc" style="width:100%;position:absolute;height:100px;margin-top:297px">
 		        	<ul>
