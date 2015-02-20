@@ -21,7 +21,6 @@
 		<script>
 			new WOW().init();
 			$(function () {
-				$("a.youtube").YouTubePlaylistModal({autoplay:1, width:640, height:480, draggable: false, hideTitleBar: true, fs:1}).click();
 
 			    $('#persona').click(function(){
 			        var t= $('#personac');
@@ -1465,7 +1464,9 @@
 			</div>
 		</div>
 		<script>
-
+			$(function(){
+				$("a.youtube").YouTubePlaylistModal({autoplay:1, width:640, height:480, fs:1}).click();
+			});
 		</script>
 	</body>
 </html>
