@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			#pyramid{
+				position:relative;
+				width:100px;
+				height:100px;
+				background:#f05000;
+				text-align:center;
+				border-radius:100%;
+				-webkit-animation:pulse 1s infinite;
+				animation:pulse 1s infinite;
+			}
+			img{
+				width:70%;
+				vertical-align:middle;
+				margin:15px 0;
+			}
+
+			@-webkit-keyframes pulse {
+			    from {box-shadow: 0px 0px 0px 0px #f05000;}
+			    to {box-shadow: 0px 0px 0px 20px transparent;}
+			} 
+
+			/* Standard syntax */ 
+			@keyframes pulse {
+			    from {box-shadow: 0px 0px 0px 0px #f05000;}
+			    to {box-shadow: 0px 0px 0px 20px transparent;}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="pyramid">
+			<a href="">
+				<img src="img/icon-pyr.svg" title="Regresar">
+			</a>
+		</div>
+	</body>
+
+</html>
